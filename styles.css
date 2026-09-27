@@ -1,0 +1,189 @@
+/* Quality Gleam Services — site styles */
+
+:root{
+  --teal-900:#0f2b33;
+  --teal-800:#173f4b;
+  --teal-700:#1e5261;
+  --teal-500:#3c93a0;
+  --teal-300:#7bc0c6;
+  --teal-100:#e8f3f3;
+  --paper:#fbfdfd;
+  --line:#d3e6e5;
+  --ink:#1b2e31;
+  --ink-soft:#4b6469;
+  --max:1120px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.logo-word{
+  font-family:"Fraunces",Georgia,serif;
+  color:var(--teal-900);
+  margin:0;
+  font-weight:560;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em;}
+a{color:var(--teal-700);}
+img{max-width:100%;display:block;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+section{padding:84px 0;}
+.eyebrow{display:none;} /* intentionally unused — no tracked-out labels */
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(251,253,253,.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:var(--max);margin:0 auto;}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.brand img{height:44px;width:auto;}
+.brand span{font-family:"Fraunces",serif;font-size:1.15rem;color:var(--teal-900);font-weight:600;}
+nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
+nav ul li a{color:var(--teal-800);text-decoration:none;font-size:.96rem;}
+nav ul li a:hover{color:var(--teal-500);}
+.nav-cta{
+  background:var(--teal-800);color:#fff !important;padding:10px 18px;border-radius:3px;
+  font-size:.94rem;
+}
+.nav-cta:hover{background:var(--teal-700);}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--teal-900);margin:5px 0;}
+
+/* Hero */
+.hero{padding:76px 0 0;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+.hero h1{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.08;}
+.hero .sub{font-size:1.15rem;color:var(--ink-soft);margin-top:22px;max-width:46ch;}
+.hero-actions{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:3px;
+  text-decoration:none;font-size:1rem;border:1px solid transparent;
+}
+.btn-primary{background:var(--teal-800);color:#fff;}
+.btn-primary:hover{background:var(--teal-700);}
+.btn-ghost{border-color:var(--teal-700);color:var(--teal-800);}
+.btn-ghost:hover{background:var(--teal-100);}
+.hero-visual{position:relative;}
+.hero-visual img{width:100%;max-width:420px;margin:0 auto;}
+
+.wave{display:block;width:100%;height:auto;}
+.wave path{fill:var(--teal-100);}
+
+/* About */
+.about{background:var(--teal-100);}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;}
+.about h2{font-size:2rem;}
+.about p{color:var(--ink-soft);font-size:1.05rem;}
+
+/* Services */
+.services h2{font-size:2rem;margin-bottom:8px;}
+.section-lead{color:var(--ink-soft);max-width:56ch;margin-bottom:40px;}
+.svc-list{border-top:1px solid var(--line);}
+.svc-row{
+  display:grid;grid-template-columns:56px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);
+  align-items:flex-start;
+}
+.svc-row .icon{
+  width:44px;height:44px;border-radius:50%;background:var(--teal-100);
+  display:flex;align-items:center;justify-content:center;color:var(--teal-700);
+}
+.svc-row h3{font-size:1.2rem;margin-bottom:6px;}
+.svc-row p{color:var(--ink-soft);margin:0;}
+
+/* Areas */
+.areas{background:var(--teal-900);color:#f2f7f7;}
+.areas h2{color:#fff;font-size:2rem;}
+.areas .section-lead{color:#bcd6d6;}
+.chip-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;}
+.chip{
+  border:1px solid rgba(255,255,255,.35);color:#eaf4f4;padding:9px 18px;border-radius:100px;font-size:.95rem;
+}
+.chip.center{background:#fff;color:var(--teal-900);border-color:#fff;font-weight:600;}
+
+/* Pricing */
+.pricing h2{font-size:2rem;margin-bottom:8px;}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px;}
+.price-card{background:var(--paper);padding:30px 26px;}
+.price-card h3{font-size:1.05rem;color:var(--teal-800);margin-bottom:14px;}
+.price-card .amount{font-family:"Fraunces",serif;font-size:1.9rem;color:var(--teal-900);display:block;margin-bottom:4px;}
+.price-card .amount .from{font-family:"Inter",sans-serif;font-size:.7rem;color:var(--ink-soft);display:block;font-weight:400;letter-spacing:0;}
+.price-card ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:.94rem;}
+.price-card ul li{margin-bottom:4px;}
+.price-note{margin-top:26px;font-size:.92rem;color:var(--ink-soft);max-width:70ch;}
+
+/* FAQ */
+.faq{background:var(--teal-100);}
+.faq h2{font-size:2rem;margin-bottom:36px;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item summary{
+  cursor:pointer;padding:20px 0;font-family:"Fraunces",serif;font-size:1.08rem;color:var(--teal-900);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";font-family:"Inter",sans-serif;font-size:1.4rem;color:var(--teal-500);}
+.faq-item[open] summary::after{content:"–";}
+.faq-item p{color:var(--ink-soft);padding-bottom:22px;margin:0;}
+
+/* Terms */
+.terms h2{font-size:2rem;margin-bottom:10px;}
+.terms-item{border-bottom:1px solid var(--line);}
+.terms-item summary{
+  cursor:pointer;padding:18px 0;font-weight:600;color:var(--teal-800);list-style:none;
+  display:flex;gap:14px;align-items:baseline;font-size:1.02rem;
+}
+.terms-item summary::-webkit-details-marker{display:none;}
+.terms-item summary .num{color:var(--teal-500);font-family:"Fraunces",serif;min-width:1.6em;}
+.terms-item .body{padding:0 0 22px 2.6em;color:var(--ink-soft);font-size:.97rem;}
+.terms-item .body p{margin:0 0 .8em;}
+.terms-legal-note{margin-top:20px;font-size:.85rem;color:var(--ink-soft);font-style:italic;}
+
+/* Contact */
+.contact{background:var(--teal-800);color:#fff;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.contact h2{color:#fff;font-size:2rem;}
+.contact p{color:#cfe6e6;}
+.contact-actions{display:flex;gap:16px;margin-top:26px;flex-wrap:wrap;}
+.contact .btn-primary{background:#fff;color:var(--teal-900);}
+.contact .btn-primary:hover{background:var(--teal-100);}
+.contact .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
+.contact .btn-ghost:hover{background:rgba(255,255,255,.08);}
+.contact-card{border:1px solid rgba(255,255,255,.25);padding:30px;border-radius:3px;}
+.contact-card div{margin-bottom:16px;font-size:.98rem;color:#eaf4f4;}
+.contact-card div strong{display:block;color:#fff;font-family:"Fraunces",serif;font-size:1rem;margin-bottom:2px;}
+
+/* Footer */
+footer{background:var(--teal-900);color:#a9c6c6;padding:48px 0 30px;font-size:.9rem;}
+.footer-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
+.footer-credit{text-align:right;}
+.footer-credit a{color:#a9c6c6;text-decoration:none;}
+.footer-credit img{height:26px;margin-top:6px;margin-left:auto;filter:grayscale(1) brightness(1.6);opacity:.85;}
+.footer-credit .label{font-size:.78rem;letter-spacing:.02em;color:#7f9d9d;}
+hr.foot-rule{border:none;border-top:1px solid rgba(255,255,255,.12);margin:34px 0 22px;}
+.copyright{font-size:.82rem;color:#7f9d9d;}
+
+@media (max-width:860px){
+  nav ul{display:none;}
+  .menu-btn{display:block;}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;}
+  .hero-visual{order:-1;max-width:260px;margin:0 auto 8px;}
+  section{padding:56px 0;}
+  .footer-grid{flex-direction:column;align-items:flex-start;}
+  .footer-credit{text-align:left;}
+  .footer-credit img{margin-left:0;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+}
