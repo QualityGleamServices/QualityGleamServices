@@ -75,8 +75,19 @@ nav ul li a:hover{color:var(--teal-500);}
 .btn-primary:hover{background:var(--teal-700);}
 .btn-ghost{border-color:var(--teal-700);color:var(--teal-800);}
 .btn-ghost:hover{background:var(--teal-100);}
-.hero-visual{position:relative;}
-.hero-visual img{width:100%;max-width:420px;margin:0 auto;}
+.hero-visual{position:relative;padding:30px;display:flex;align-items:center;justify-content:center;}
+.hero-visual img{width:100%;max-width:420px;margin:0 auto;position:relative;z-index:2;}
+.hero-visual .glow{
+  position:absolute;inset:8%;z-index:0;border-radius:50%;
+  background:
+    radial-gradient(circle at 32% 30%, var(--teal-300) 0%, transparent 62%),
+    radial-gradient(circle at 68% 68%, var(--teal-500) 0%, transparent 58%);
+  filter:blur(38px);opacity:.55;
+}
+.hero-visual .spark{position:absolute;z-index:1;width:22px;height:22px;fill:var(--teal-500);opacity:.7;}
+.hero-visual .spark-1{top:6%;right:12%;width:30px;height:30px;opacity:.85;}
+.hero-visual .spark-2{bottom:14%;left:6%;width:16px;height:16px;fill:var(--teal-300);}
+.hero-visual .spark-3{top:44%;right:2%;width:12px;height:12px;fill:var(--teal-900);opacity:.4;}
 
 .wave{display:block;width:100%;height:auto;}
 .wave path{fill:var(--teal-100);}
