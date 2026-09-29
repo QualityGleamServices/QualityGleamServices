@@ -122,7 +122,7 @@ nav ul li a:hover{color:var(--teal-500);}
   border:1px solid rgba(255,255,255,.35);color:#eaf4f4;padding:9px 18px;border-radius:100px;font-size:.95rem;
 }
 .chip.center{background:#fff;color:var(--teal-900);border-color:#fff;font-weight:600;}
-.areas-more{margin-top:22px;font-size:.94rem;color:#bcd6d6;max-width:68ch;}
+.areas-more{margin-top:34px;font-size:.94rem;color:#bcd6d6;max-width:68ch;}
 
 /* Pricing */
 .pricing h2{font-size:2rem;margin-bottom:8px;}
@@ -191,7 +191,7 @@ hr.foot-rule{border:none;border-top:1px solid rgba(255,255,255,.12);margin:34px 
 .copyright{font-size:.82rem;color:#7f9d9d;}
 
 @media (max-width:860px){
-  nav ul{display:none;}
+  .primary-nav{display:none;}
   .menu-btn{display:block;}
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;}
   .hero-grid{gap:20px;}
