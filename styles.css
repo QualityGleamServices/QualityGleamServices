@@ -112,6 +112,9 @@ nav ul li a:hover{color:var(--teal-500);}
 .results-photo{aspect-ratio:1/1;overflow:hidden;border-radius:4px;}
 .results-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;}
 .results-photo:hover img{transform:scale(1.04);}
+.results-more{margin-top:30px;text-align:center;}
+.results-more .btn-ghost{border-color:var(--teal-700);color:var(--teal-800);}
+.results-more .btn-ghost:hover{background:var(--teal-100);}
 
 /* Areas */
 .areas{background:var(--teal-900);color:#f2f7f7;}
@@ -176,6 +179,13 @@ nav ul li a:hover{color:var(--teal-500);}
 .contact .btn-primary:hover{background:var(--teal-100);}
 .contact .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff;}
 .contact .btn-ghost:hover{background:rgba(255,255,255,.08);}
+.icon-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:46px;height:46px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);color:#fff;
+}
+.icon-btn svg{width:20px;height:20px;}
+.icon-btn:hover{background:rgba(255,255,255,.1);}
 .contact-card{border:1px solid rgba(255,255,255,.25);background:rgba(15,43,51,.55);backdrop-filter:blur(3px);padding:30px;border-radius:3px;}
 .contact-card div{margin-bottom:16px;font-size:.98rem;color:#eaf4f4;}
 .contact-card div strong{display:block;color:#fff;font-family:"Fraunces",serif;font-size:1rem;margin-bottom:2px;}
